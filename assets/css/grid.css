@@ -3,7 +3,7 @@
 .container,
 .container-fluid {
     --grid-columns: 12;
-    --spacer: 30px;
+    --spacer: 40px;
 
     width: 100%;
     padding-right: calc(var(--spacer) / 2);
@@ -436,6 +436,8 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .container {
+        --spacer: 30px;
+
         max-width: 960px;
     }
 
