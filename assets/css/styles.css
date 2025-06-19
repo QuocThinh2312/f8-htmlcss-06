@@ -61,14 +61,43 @@ select {
     opacity: 0.8;
 }
 
+.section-heading {
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 6.6rem;
+    letter-spacing: -0.224rem;
+    text-align: center;
+}
+
 .section-desc {
+    max-width: 544px;
+    margin: 0 auto;
     color: var(--desc-color);
     font-size: 1.8rem;
     line-height: 3rem;
+    text-align: center;
+}
+
+.section-title {
+    color: var(--heading-color);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4rem;
+    letter-spacing: -0.128rem;
 }
 
 .col--no-padding {
     padding: 0 !important;
+}
+
+.logo {
+    transition: scale 0.5s ease;
+}
+
+.logo:hover {
+    scale: 1.1;
 }
 
 /* Header */
@@ -304,9 +333,80 @@ select {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #fbfaff;
+    background: var(--section-color);
 }
 
 .clients__group:nth-child(2) .clients-item:last-child .clients-item__logo-wrap {
     background: #fff;
+}
+
+/* Expertise */
+.expertise {
+    margin-top: 133px;
+}
+
+.expertise__list {
+    margin-top: 60px;
+}
+
+.expertise-item {
+    height: 100%;
+    padding: 33px 43px;
+    background: var(--section-color);
+    transition: 0.4s ease;
+}
+
+.expertise-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transform: translateY(-6px);
+}
+
+.expertise-item__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid #efedf3;
+    background: #fff;
+}
+
+.expertise-item:hover .expertise-item__icon-wrap {
+    border-color: rgba(8, 4, 21, 0.2);
+}
+
+.expertise-item__title {
+    margin: 22px 0 15px;
+}
+
+.expertise-item__desc {
+    max-width: 285px;
+    margin: 0;
+    text-align: left;
+}
+
+.expertise__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.expertise__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #cecdd0;
+    cursor: pointer;
+}
+
+.expertise__dot--active,
+.expertise__dot:hover {
+    width: 12px;
+    height: 12px;
+    outline: 1px solid var(--primary-color);
+    outline-offset: 3px;
+    background: var(--primary-color);
 }
