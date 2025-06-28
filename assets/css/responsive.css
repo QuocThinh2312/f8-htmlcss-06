@@ -53,6 +53,15 @@
     .show-on-mobile {
         display: none;
     }
+
+    .expertise-item:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        transform: translateY(-6px);
+    }
+
+    .expertise-item:hover .expertise-item__icon-wrap {
+        border-color: rgba(8, 4, 21, 0.2);
+    }
 }
 
 /* Tablet/Mobile */
@@ -258,6 +267,7 @@
 
     .projects {
         padding: 69px 0 60px;
+        margin-top: 120px;
     }
 
     .projects__heading {
@@ -279,6 +289,29 @@
 
     .projects__btn-wrap {
         margin-top: 50px;
+    }
+
+    .profile {
+        margin-top: 120px;
+    }
+
+    .profile__heading {
+        margin-bottom: 20px;
+    }
+
+    .profile__stats {
+        padding: 30px 16px;
+        margin: 50px 0 40px;
+    }
+
+    .profile__play-button {
+        width: 94px;
+        height: 94px;
+    }
+
+    .profile__play-icon {
+        width: 12.7px;
+        height: 15.2px;
     }
 }
 
@@ -325,6 +358,10 @@
 
 /* Mobile */
 @media screen and (width <= 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
     .section-heading {
         font-size: 3.6rem;
         line-height: 4.2rem;
@@ -369,10 +406,6 @@
         line-height: 2.6rem;
     }
 
-    .hero__cta-group {
-        gap: 40px;
-    }
-
     .hero__btn {
         min-width: 147px;
         height: 55px;
@@ -381,6 +414,10 @@
 
     .hero__label {
         font-size: 1.6rem;
+    }
+
+    .hero__cta-group {
+        gap: 40px;
     }
 
     .hero__socials-wrap {
@@ -440,7 +477,18 @@
         overflow: hidden;
     }
 
+    .expertise-item__icon-wrap {
+        width: 62px;
+        height: 62px;
+    }
+
+    .expertise-item__icon {
+        width: 18.5px;
+        height: 31.2px;
+    }
+
     .expertise-item__title {
+        margin: 30px 0 10px;
         font-size: 2.8rem;
         line-height: 3.6rem;
         letter-spacing: -0.112rem;
@@ -481,6 +529,51 @@
         height: 56px;
         font-size: 1.6rem;
     }
+
+    .profile__greeting {
+        font-size: 2rem;
+        line-height: 4rem;
+        letter-spacing: -0.08rem;
+    }
+
+    .profile__greeting-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .profile__stat {
+        gap: 5px;
+    }
+
+    .profile__stat-number {
+        font-size: 3rem;
+        line-height: 4.2rem;
+        letter-spacing: 0.09rem;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+    }
+
+    .profile__stat-label {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    .profile__play-button {
+        width: 77px;
+        height: 77px;
+    }
+
+    .profile__play-icon {
+        width: 10.4px;
+        height: 12.5px;
+    }
+
+    .profile__video-label {
+        min-width: 118px;
+        height: 44px;
+        color: #51586a;
+        font-size: 1.2rem;
+    }
 }
 
 /* Mobile S */
@@ -510,5 +603,10 @@
 
     .projects-item__decor {
         width: 260px;
+    }
+
+    .row:last-child .profile__col {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
