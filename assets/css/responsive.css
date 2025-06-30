@@ -329,6 +329,11 @@
     .questions-item__label {
         width: 100%;
     }
+
+    .atmosphere__row {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
 }
 
 /* Tablet */
@@ -377,6 +382,10 @@
 
     .feedback__img-decor:last-child {
         width: 150px;
+    }
+
+    .atmosphere__img {
+        height: auto;
     }
 }
 
@@ -686,6 +695,23 @@
         width: 9.3px;
         height: 9.3px;
     }
+
+    .atmosphere {
+        margin-top: 120px;
+    }
+
+    .atmosphere__desc {
+        margin-bottom: 10px;
+    }
+
+    .atmosphere__link {
+        margin-bottom: 60px;
+        font-size: 2rem;
+        line-height: 4rem;
+        letter-spacing: -0.08rem;
+        text-underline-offset: 2.5px;
+        text-decoration-thickness: 1px;
+    }
 }
 
 /* Mobile S */
@@ -720,5 +746,15 @@
     .row:last-child .profile__col {
         padding-right: 20px;
         padding-left: 20px;
+    }
+
+    .questions-item__input:checked
+        + .questions-item__label
+        .questions-item__desc {
+        max-height: 78px;
+    }
+
+    .atmosphere__img {
+        height: 503px;
     }
 }
