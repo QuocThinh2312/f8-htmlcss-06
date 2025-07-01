@@ -373,7 +373,8 @@
 
     .contact__img-decor:nth-of-type(2) {
         width: 424.5px;
-        height: 366px;
+        height: 100%;
+        object-fit: cover;
     }
 
     .contact__img-decor:last-child {
@@ -694,6 +695,8 @@
 
     .feedback-item__quote {
         max-width: 100%;
+        font-size: 1.8rem;
+        line-height: 3rem;
     }
 
     .feedback-item__name {
@@ -839,6 +842,15 @@
         padding-left: 20px;
     }
 
+    .profile__thumb-wrap {
+        aspect-ratio: 175 / 138;
+    }
+
+    .profile__thumb {
+        height: 100%;
+        object-fit: cover;
+    }
+
     .questions-item__input:checked
         + .questions-item__label
         .questions-item__desc {
@@ -847,6 +859,12 @@
 
     .atmosphere__img {
         height: 503px;
+    }
+
+    .contact__heading {
+        max-width: 225px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .footer::before {
