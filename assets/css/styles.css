@@ -26,6 +26,18 @@ body {
     font-size: 1.6rem;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background-color: rgba(93, 59, 238, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color);
+}
 /* Common */
 a {
     text-decoration: none;
@@ -94,6 +106,8 @@ button {
 }
 
 .logo {
+    width: 52.5px;
+    height: 64.5px;
     transition: scale 0.5s ease;
 }
 
@@ -125,6 +139,32 @@ button {
     background: var(--primary-color);
 }
 
+.connect__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(93, 59, 238, 0.2);
+}
+
+.connect__mail {
+    color: var(--heading-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 3rem;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3px;
+}
+
 /* Header */
 .header {
     position: sticky;
@@ -138,30 +178,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header__contact-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header__contact-icon-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    border: 1px solid rgba(93, 59, 238, 0.2);
-}
-
-.header__contact-mail {
-    color: var(--heading-color);
-    font-size: 2.2rem;
-    font-weight: 500;
-    line-height: 3rem;
-    text-decoration: underline;
 }
 
 .navbar__list {
@@ -408,6 +424,10 @@ button {
 }
 
 /* Projects */
+#projects {
+    scroll-margin-top: 80px;
+}
+
 .projects {
     padding: 86px 0;
     margin-top: 140px;
@@ -451,6 +471,11 @@ button {
     align-items: center;
 }
 
+.projects-item__info {
+    position: relative;
+    z-index: 1;
+}
+
 .projects-item__desc {
     max-width: 220px;
     margin: 10px 0 20px;
@@ -466,6 +491,10 @@ button {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     text-underline-offset: 2px;
+}
+
+.projects-item__link:hover {
+    color: var(--primary-color);
 }
 
 .projects-item__img-wrap {
@@ -496,6 +525,10 @@ button {
 }
 
 /* Profile */
+#journey {
+    scroll-margin-top: 100px;
+}
+
 .profile {
     margin-top: 140px;
     background: linear-gradient(to bottom, #fff 70%, var(--section-color) 70%);
@@ -601,6 +634,11 @@ button {
     backdrop-filter: blur(12px);
 
     translate: -50% -50%;
+    transition: 0.3s ease;
+}
+
+.profile__play-button:hover {
+    scale: 1.1;
     cursor: pointer;
 }
 
@@ -702,6 +740,10 @@ button {
 }
 
 /* Questions */
+#service {
+    scroll-margin-top: 100px;
+}
+
 .questions {
     margin-top: 95px;
 }
@@ -835,10 +877,23 @@ button {
     text-align: center;
 }
 
+.atmosphere__link:hover {
+    opacity: 0.8;
+}
+
+.atmosphere__img-wrap {
+    overflow: hidden;
+}
+
 .atmosphere__img {
     width: 100%;
     height: 529px;
     object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.atmosphere__img:hover {
+    scale: 1.1;
 }
 
 .atmosphere__dots {
@@ -846,6 +901,10 @@ button {
 }
 
 /* Contact */
+#contact {
+    scroll-margin-top: 100px;
+}
+
 .contact {
     position: relative;
     padding: 68px 0;
@@ -885,4 +944,68 @@ button {
 
 .contact__img-decor:last-child {
     inset: 0 0 auto auto;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    margin: 50px 0 30px;
+}
+
+.footer::before {
+    position: absolute;
+    inset: 99px auto auto 50%;
+    width: 95%;
+    height: 1px;
+    background: #cecdd2;
+    transform: translateX(-50%);
+    content: "";
+}
+
+.footer__top,
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__top {
+    margin-bottom: 50px;
+}
+
+.footer__copyright,
+.footer__link {
+    max-width: max-content;
+    margin: 0;
+    text-align: left;
+}
+
+.footer__copyright {
+    color: #979aaa;
+}
+
+.footer__link-wrap {
+    position: relative;
+    display: flex;
+    gap: 36px;
+}
+
+.footer__link-wrap::before {
+    position: absolute;
+    inset: 50% auto auto 125px;
+    width: 1px;
+    height: 14px;
+    background: #979aaa;
+    transform: translateY(-50%);
+    content: "";
+}
+
+.footer__link {
+    color: #979aaa;
+    letter-spacing: -0.054rem;
+}
+
+.footer__link:hover {
+    color: var(--heading-color);
+    text-decoration: underline;
 }
