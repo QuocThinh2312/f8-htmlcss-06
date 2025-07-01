@@ -266,6 +266,10 @@ button {
     gap: 30px;
 }
 
+.hero__btn {
+    animation: pulse 2s infinite;
+}
+
 .hero__label {
     color: var(--heading-color);
     font-size: 1.8rem;
@@ -352,7 +356,7 @@ button {
 }
 
 .clients-item {
-    display: flex;
+    display: inline-flex;
     gap: 13px;
 }
 
@@ -932,6 +936,10 @@ button {
     justify-content: center;
 }
 
+.contact__btn {
+    animation: pulse 2s infinite;
+}
+
 .contact__img-decor {
     position: absolute;
     inset: auto auto 0 0;
@@ -1008,4 +1016,19 @@ button {
 .footer__link:hover {
     color: var(--heading-color);
     text-decoration: underline;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(93, 59, 238, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(93, 59, 238, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(93, 59, 238, 0);
+    }
 }
